@@ -1,4 +1,5 @@
 import { Sidebar } from "@/presentation/components";
+import Infobar from "@/presentation/components/Infobar/page";
 
 export default function Layout({
  children
@@ -6,9 +7,15 @@ export default function Layout({
  children: React.ReactNode;
 }) {
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-row gap-40">
+      
     <Sidebar/>
-    <main>
+   
+    <main className="basis-1/2">
+    <div className="grow h-14">
+    <Infobar/>
+    </div>
+    
       {children}
     </main>
     </div>

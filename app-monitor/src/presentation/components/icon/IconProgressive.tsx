@@ -5,13 +5,11 @@ interface Props {
 //TODO
 //* Refactor IconProgressive
 
-export const IconProgressive = ({  percent }: Props) => {
-  
+export const IconProgressive = ({ percent }: Props) => {
+
   return (
-    <div
-      className="flex items-center justify-center"
-    >
-    
+    <div className="flex items-center justify-center">
+
       <span className="absolute text-xs text-blue-400">{percent}</span>
     </div>
 
