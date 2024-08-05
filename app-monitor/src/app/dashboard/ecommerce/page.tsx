@@ -1,6 +1,7 @@
 import { commandRepository } from "@/infrastructure/repository/commands";
 import { CommandItem } from "@/interfaces";
 import { CardCommand } from "@/presentation/components/card-command/CardCommand";
+import { IconProgressive } from "@/presentation/components/icon/IconProgressive";
 
 const getCommandItemList = async():Promise<CommandItem[]> => {
     return  await commandRepository.getCommandList();
@@ -19,6 +20,7 @@ export default async function EcommerceControlPage() {
         <div
           className="flex flex-col gap-2 w-full pl-6 py-2"
         >
+        
          {
           commandList.map((commandItem:CommandItem) => (
             <CardCommand key={commandItem.id} {...commandItem}/>

@@ -1,14 +1,16 @@
-import { ROUTE_ECOMMERCE,ROUTE_OTHERS} from "@/common/constants"
+import { ROUTE_CONTROLLERONE, ROUTE_CONTROLLERTWO, ROUTE_ECOMMERCE,ROUTE_OTHERS} from "@/common/constants"
 import { Route} from "@/interfaces"
 import { SidebarMenuItem } from "./SidebarMenuItem"
-import {} from 'react-icons'
-import { FaWrench } from "react-icons/fa";
+
 
 
 
 const menuRoutes:Route[] = [
   {...ROUTE_ECOMMERCE},
   {...ROUTE_OTHERS},
+  { ...ROUTE_CONTROLLERONE},
+  {...ROUTE_CONTROLLERTWO}
+  
 ]
 
 

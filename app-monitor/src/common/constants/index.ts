@@ -13,3 +13,19 @@ export const ROUTE_OTHERS =
     title: "title other",
     description: "description other",
 };
+
+export const ROUTE_CONTROLLERONE =
+{
+    path: "/dashboard/controllerone",
+    icon: "fa-solid fa-wrench",
+    title: "Control 1",
+    description: "Control",
+};
+
+export const ROUTE_CONTROLLERTWO =
+{
+    path: "/dashboard/controllertwo",
+    icon: "fa-solid fa-wrench",
+    title: "Control 2",
+    description: "Control",
+};

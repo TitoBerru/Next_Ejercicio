@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react"
 import { RunStatus } from "@/interfaces";
 import { IconProgressive } from "../icon/IconProgressive";
+import { FaChevronDown, FaPlay } from "react-icons/fa";
+import { FaRotateRight } from "react-icons/fa6";
 
 
 
@@ -14,7 +16,7 @@ interface Props {
     runPercent: number;
 }
 
-export const CardCommand = ({commandName,runPercent}:Props) => {
+export const CardCommand = ({ commandName, runPercent }: Props) => {
     const [runStatus, setRunStatus] = useState<RunStatus>({
         isRunning: false,
         isCheckSuccessfully: undefined
@@ -47,17 +49,17 @@ export const CardCommand = ({commandName,runPercent}:Props) => {
             >
                 {
                     (runStatus.isRunning)
-                        ? <i className="fa-solid fa-play text-blue-400"></i>
+                        ? <FaPlay color="blue" />
                         : (runStatus.isCheckSuccessfully === undefined)
-                            ? <i className="fa-solid fa-play"></i>
+                            ? <FaPlay />
                             : (runStatus.isCheckSuccessfully)
-                                ? <i className="fa-solid fa-rotate-right"></i>
-                                : <i className="fa-solid fa-chevron-down"></i>
+                                ? <FaRotateRight />
+                                : <FaChevronDown />
                 }
             </button>
             <label className="shadow-lg text-sm text-zinc-500 bg-zinc-200 rounded-md p-2 w-4/5">
                 {commandName}
-                
+
             </label>
             <div
                 className="pr-4"
